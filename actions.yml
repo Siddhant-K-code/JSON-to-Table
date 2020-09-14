@@ -1,0 +1,26 @@
+name: "json2htmltable"
+description: "convert json to html table"
+branding:
+  icon: "code"
+  color: "orange"
+inputs:
+  columns:
+    description: "how many columns"
+    required: false
+    default: "2"
+  json-file-path:
+    description: "json file to load"
+    required: true
+    default: "data.json"
+  github-token:
+    description: "github token"
+    required: true
+  html-cell:
+    description: "html for the table cell"
+    required: true
+  object-field-names:
+    description: "array of object field names from your json projects"
+    required: true
+runs:
+  using: "node12"
+  main: "dist/index.js"
